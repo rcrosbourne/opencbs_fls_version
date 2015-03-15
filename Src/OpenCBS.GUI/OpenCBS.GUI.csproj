@@ -2850,7 +2850,6 @@
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <Content Include="opencbs.ico" />
-    <None Include="opencbs.ico.old" />
     <Content Include="Reports\Internal\Collection_Sheet.zip">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -3060,8 +3059,6 @@
     <None Include="Resources\group.png" />
     <None Include="Resources\find.png" />
     <None Include="Resources\database.png" />
-    <None Include="Resources\FLS_logo.png" />
-    <None Include="Resources\fls_icon.bmp" />
     <Content Include="Resources\group_members_32x32.png" />
     <Content Include="Resources\ky_small.png" />
     <None Include="Resources\languages.png" />

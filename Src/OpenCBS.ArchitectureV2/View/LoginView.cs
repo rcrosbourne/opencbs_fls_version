@@ -96,20 +96,5 @@ namespace OpenCBS.ArchitectureV2.View
         {
             _loginButton.Click += (sender, e) => presenterCallbacks.Ok();
         }
-
-        private void _usernameTextBox_TextChanged(object sender, System.EventArgs e)
-        {
-
-        }
-
-        private void _usernameLabel_Click(object sender, System.EventArgs e)
-        {
-
-        }
-
-        private void _passwordLabel_Click(object sender, System.EventArgs e)
-        {
-
-        }
     }
 }

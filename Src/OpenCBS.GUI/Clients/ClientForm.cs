@@ -1813,22 +1813,10 @@ namespace OpenCBS.GUI.Clients
             buttonLoanDisbursment.Enabled = !disbursed && validated && !isNew;
             if (isNew)
             {
-                EconomicActivity newActivity = null;
-                //switch (_client.Type)
-                //{
-                //    case OClientTypes.Person:
-                //        newActivity = ((Person)_client).Activity;
-                //        break;
-                //    case OClientTypes.Group:
-                //        var group = (Group)_client;
-                //        var leader = @group.Leader;
-                //        newActivity = leader == null ? null : ((Person)leader.Tiers).Activity;
-                //        break;
-                //    case OClientTypes.Corporate:
-                //        newActivity = ((Corporate)_client).Activity;
-                //        break;
-                //}
-                eacLoan.Activity = newActivity;
+                eacLoan.Activity = ServicesProvider.GetInstance()
+                                                   .GetEconomicActivityServices()
+                                                   .FindAllEconomicActivities(true)
+                                                   .FirstOrDefault(i => !i.HasChildrens);
             }
             else
             {
@@ -1953,8 +1941,14 @@ namespace OpenCBS.GUI.Clients
             nudInterestRate.Enabled = isPendingOrPostponed;
             numericUpDownLoanGracePeriod.Enabled = isPendingOrPostponed && !_credit.Product.GracePeriod.HasValue;
             nudLoanNbOfInstallments.Enabled = isPendingOrPostponed;
-            _installmentTypeComboBox.Enabled = isPendingOrPostponed;
-            _scheduleTypeComboBox.Enabled = isPendingOrPostponed;
+            if (_credit.Product.InstallmentType.Id == 0)
+            {
+                _installmentTypeComboBox.Enabled = isPendingOrPostponed;
+            }
+            if (_credit.Product.LoanType == OLoanTypes.All)
+            {
+                _scheduleTypeComboBox.Enabled = isPendingOrPostponed;
+            }
             eacLoan.Enabled = isPendingOrPostponed;
             textBoxLoanAnticipatedTotalFees.Enabled = isPendingOrPostponed;
             tbLoanAnticipatedPartialFees.Enabled = isPendingOrPostponed;

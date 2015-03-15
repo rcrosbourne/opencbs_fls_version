@@ -161,15 +161,5 @@ namespace OpenCBS.GUI.Login
             TechnicalSettings.DatabaseName = databaseCombobox.Text;
             Restart.LaunchRestarter();
         }
-
-        private void pictureBox1_Click(object sender, System.EventArgs e)
-        {
-
-        }
-
-        private void LoginForm_Load(object sender, System.EventArgs e)
-        {
-
-        }
     }
 }

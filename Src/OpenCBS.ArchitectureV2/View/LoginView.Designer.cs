@@ -9,6 +9,7 @@ namespace OpenCBS.ArchitectureV2.View
         private TextBox _passwordTextBox;
         private Label _usernameLabel;
         private Label _passwordLabel;
+        private PictureBox logoPicturebox;
         /// <summary>
         /// Variable nécessaire au concepteur.
         /// </summary>
@@ -44,10 +45,8 @@ namespace OpenCBS.ArchitectureV2.View
             this._passwordLabel = new System.Windows.Forms.Label();
             this._databaseComboBox = new System.Windows.Forms.ComboBox();
             this._databaseLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.logoPicturebox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPicturebox)).BeginInit();
             this.SuspendLayout();
             // 
             // _loginButton
@@ -61,7 +60,6 @@ namespace OpenCBS.ArchitectureV2.View
             // 
             resources.ApplyResources(this._usernameTextBox, "_usernameTextBox");
             this._usernameTextBox.Name = "_usernameTextBox";
-            this._usernameTextBox.TextChanged += new System.EventHandler(this._usernameTextBox_TextChanged);
             // 
             // _passwordTextBox
             // 
@@ -73,14 +71,12 @@ namespace OpenCBS.ArchitectureV2.View
             resources.ApplyResources(this._usernameLabel, "_usernameLabel");
             this._usernameLabel.BackColor = System.Drawing.Color.Transparent;
             this._usernameLabel.Name = "_usernameLabel";
-            this._usernameLabel.Click += new System.EventHandler(this._usernameLabel_Click);
             // 
             // _passwordLabel
             // 
             resources.ApplyResources(this._passwordLabel, "_passwordLabel");
             this._passwordLabel.BackColor = System.Drawing.Color.Transparent;
             this._passwordLabel.Name = "_passwordLabel";
-            this._passwordLabel.Click += new System.EventHandler(this._passwordLabel_Click);
             // 
             // _databaseComboBox
             // 
@@ -95,28 +91,21 @@ namespace OpenCBS.ArchitectureV2.View
             this._databaseLabel.BackColor = System.Drawing.Color.Transparent;
             this._databaseLabel.Name = "_databaseLabel";
             // 
-            // pictureBox1
+            // logoPicturebox
             // 
-            this.pictureBox1.Image = global::OpenCBS.ArchitectureV2.Properties.Resources.FLS_logo;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::OpenCBS.ArchitectureV2.Properties.Resources.Logo;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
+            this.logoPicturebox.BackColor = System.Drawing.Color.Transparent;
+            this.logoPicturebox.BackgroundImage = global::OpenCBS.ArchitectureV2.Properties.Resources.Logo;
+            resources.ApplyResources(this.logoPicturebox, "logoPicturebox");
+            this.logoPicturebox.Name = "logoPicturebox";
+            this.logoPicturebox.TabStop = false;
             // 
             // LoginView
             // 
             this.AcceptButton = this._loginButton;
             resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this._databaseComboBox);
+            this.Controls.Add(this.logoPicturebox);
             this.Controls.Add(this._usernameTextBox);
             this.Controls.Add(this._passwordTextBox);
             this.Controls.Add(this._loginButton);
@@ -128,8 +117,7 @@ namespace OpenCBS.ArchitectureV2.View
             this.MinimizeBox = false;
             this.Name = "LoginView";
             this.TopMost = true;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPicturebox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,8 +126,6 @@ namespace OpenCBS.ArchitectureV2.View
 
         private ComboBox _databaseComboBox;
         private Label _databaseLabel;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
 
     }
 }

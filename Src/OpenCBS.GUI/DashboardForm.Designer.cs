@@ -53,7 +53,6 @@ namespace OpenCBS.GUI
             this._branchFilterLabel = new System.Windows.Forms.Label();
             this.topBarPanel = new System.Windows.Forms.TableLayoutPanel();
             this.smallLogoPictureBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.generalInfoPanel.SuspendLayout();
             this.infoPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -64,7 +63,6 @@ namespace OpenCBS.GUI
             this._filterPanel.SuspendLayout();
             this.topBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.smallLogoPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // generalInfoPanel
@@ -236,23 +234,15 @@ namespace OpenCBS.GUI
             // topBarPanel
             // 
             resources.ApplyResources(this.topBarPanel, "topBarPanel");
-            this.topBarPanel.Controls.Add(this.pictureBox1, 0, 0);
             this.topBarPanel.Controls.Add(this.smallLogoPictureBox, 0, 0);
             this.topBarPanel.Name = "topBarPanel";
             // 
             // smallLogoPictureBox
             // 
             resources.ApplyResources(this.smallLogoPictureBox, "smallLogoPictureBox");
-            this.smallLogoPictureBox.Image = global::OpenCBS.GUI.Properties.Resources.FLS_logo;
+            this.smallLogoPictureBox.Image = global::OpenCBS.GUI.Properties.Resources.LOGO;
             this.smallLogoPictureBox.Name = "smallLogoPictureBox";
             this.smallLogoPictureBox.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Image = global::OpenCBS.GUI.Properties.Resources.LOGO;
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
             // 
             // DashboardForm
             // 
@@ -276,7 +266,6 @@ namespace OpenCBS.GUI
             this._filterPanel.PerformLayout();
             this.topBarPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.smallLogoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -308,6 +297,5 @@ namespace OpenCBS.GUI
         private BrightIdeasSoftware.OLVColumn parNameColumn;
         private BrightIdeasSoftware.OLVColumn parAmountColumn;
         private BrightIdeasSoftware.OLVColumn parQuantityColumn;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

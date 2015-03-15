@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>FLS_logo.ico</ApplicationIcon>
+    <ApplicationIcon>opencbs.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="IronPython">
@@ -211,9 +211,7 @@
     <Folder Include="Service\Scripts\Repayment\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FLS_logo.ico" />
     <Content Include="opencbs.ico" />
-    <None Include="Resources\FLS_logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

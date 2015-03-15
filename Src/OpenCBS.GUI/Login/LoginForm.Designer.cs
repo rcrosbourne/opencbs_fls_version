@@ -11,6 +11,7 @@ namespace OpenCBS.GUI.Login
         private TextBox passwordTextbox;
         private Label usernameLabel;
         private Label passwordLabel;
+        private PictureBox logoPicturebox;
         /// <summary>
         /// Variable nécessaire au concepteur.
         /// </summary>
@@ -44,12 +45,10 @@ namespace OpenCBS.GUI.Login
             this.passwordTextbox = new System.Windows.Forms.TextBox();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.passwordLabel = new System.Windows.Forms.Label();
+            this.logoPicturebox = new System.Windows.Forms.PictureBox();
             this.databaseCombobox = new System.Windows.Forms.ComboBox();
             this.databaseLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPicturebox)).BeginInit();
             this.SuspendLayout();
             // 
             // startButton
@@ -81,6 +80,14 @@ namespace OpenCBS.GUI.Login
             resources.ApplyResources(this.passwordLabel, "passwordLabel");
             this.passwordLabel.Name = "passwordLabel";
             // 
+            // logoPicturebox
+            // 
+            this.logoPicturebox.BackColor = System.Drawing.Color.Transparent;
+            this.logoPicturebox.BackgroundImage = global::OpenCBS.GUI.Properties.Resources.LOGO;
+            resources.ApplyResources(this.logoPicturebox, "logoPicturebox");
+            this.logoPicturebox.Name = "logoPicturebox";
+            this.logoPicturebox.TabStop = false;
+            // 
             // databaseCombobox
             // 
             this.databaseCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -94,29 +101,14 @@ namespace OpenCBS.GUI.Login
             resources.ApplyResources(this.databaseLabel, "databaseLabel");
             this.databaseLabel.Name = "databaseLabel";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::OpenCBS.GUI.Properties.Resources.FLS_logo;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::OpenCBS.GUI.Properties.Resources.LOGO;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
             // LoginForm
             // 
             this.AcceptButton = this.startButton;
             this.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this, "$this");
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.databaseLabel);
             this.Controls.Add(this.databaseCombobox);
+            this.Controls.Add(this.logoPicturebox);
             this.Controls.Add(this.usernameTextbox);
             this.Controls.Add(this.passwordTextbox);
             this.Controls.Add(this.startButton);
@@ -127,9 +119,7 @@ namespace OpenCBS.GUI.Login
             this.MinimizeBox = false;
             this.Name = "LoginForm";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.LoginForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPicturebox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,8 +128,6 @@ namespace OpenCBS.GUI.Login
 
         private ComboBox databaseCombobox;
         private Label databaseLabel;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
 
     }
 }
