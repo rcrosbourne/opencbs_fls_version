@@ -81,7 +81,7 @@ namespace OpenCBS.Services
 
                 transac.Commit();
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 transac.Rollback();
                 throw;
@@ -145,7 +145,7 @@ namespace OpenCBS.Services
 
                 transac.Commit();
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 transac.Rollback();
                 throw;

@@ -20,10 +20,11 @@
 // Contact: contact@opencbs.com
 
 using System.Collections.Generic;
-using NUnit.Framework;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.SearchResult;
+using NUnit.Framework;
 using OpenCBS.Manager.Contracts;
+using OpenCBS.Shared.Settings;
 
 namespace OpenCBS.Test.Manager
 {

@@ -344,7 +344,9 @@ namespace OpenCBS.Manager.Products
 
        public void UpdateExistingSavingBooksContracts(ISavingProduct product)
         {
-           List<int> contractsId=new List<int>();
+            bool isItTheFirstStatement=true;
+            string updateInterestRate="";
+            List<int> contractsId=new List<int>();
             SavingsBookProduct savingsBookProduct = (SavingsBookProduct) product;
             int savingProductId = savingsBookProduct.Id;
             string selectContractsId =
@@ -421,7 +423,7 @@ namespace OpenCBS.Manager.Products
                 
                 if (savingsBookProduct.InterestRate.HasValue)
                 {
-                    var updateInterestRate=@"UPDATE [dbo].[SavingContracts] SET [interest_rate]=@interest_rate
+                    updateInterestRate = @"UPDATE [dbo].[SavingContracts] SET [interest_rate]=@interest_rate
                                            WHERE id=@id";
                     using (SqlConnection conn = GetConnection())
                     using (OpenCbsCommand c = new OpenCbsCommand(updateInterestRate, conn))

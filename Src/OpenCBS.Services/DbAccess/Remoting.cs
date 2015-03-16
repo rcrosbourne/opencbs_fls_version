@@ -117,7 +117,7 @@ namespace OpenCBS.Services
 
                     //ChannelServices.GetChannelSinkProperties(_remoteOperation)["timeout"] = 0;
                 }
-                catch(Exception)
+                catch(Exception e)
                 {
                     _remotingUniqueInstance = null;
                     ChannelServices.UnregisterChannel(channel);

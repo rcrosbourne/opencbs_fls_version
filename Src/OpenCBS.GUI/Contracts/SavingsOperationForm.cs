@@ -24,17 +24,18 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using OpenCBS.CoreDomain;
 using OpenCBS.CoreDomain.Accounting;
+using OpenCBS.CoreDomain.SearchResult;
 using OpenCBS.CoreDomain.Contracts.Savings;
 using OpenCBS.CoreDomain.Products;
-using OpenCBS.CoreDomain.SearchResult;
 using OpenCBS.Enums;
 using OpenCBS.ExceptionsHandler;
 using OpenCBS.ExceptionsHandler.Exceptions.SavingExceptions;
-using OpenCBS.GUI.Tools;
-using OpenCBS.GUI.UserControl;
-using OpenCBS.MultiLanguageRessources;
 using OpenCBS.Services;
 using OpenCBS.Shared;
+using OpenCBS.GUI.UserControl;
+using OpenCBS.GUI.Tools;
+using OpenCBS.MultiLanguageRessources;
+using OpenCBS.GUI.UserControl;
 using OpenCBS.Shared.Settings;
 
 namespace OpenCBS.GUI.Contracts
