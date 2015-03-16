@@ -341,7 +341,7 @@ namespace OpenCBS.GUI.AuditTrail
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitle;
+        private new System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.DateTimePicker dtTo;
         private System.Windows.Forms.DateTimePicker dtFrom;

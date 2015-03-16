@@ -154,28 +154,6 @@ namespace OpenCBS.Manager
         {
             InitCache();
             return _cache.Find(pm2 => pm2.Id == paymentMethodId);
-            string q = @"SELECT pm.[id]
-                                  ,[name]
-                                  ,[description]
-                                  ,[pending]
-                                  , 0 AS account_id
-                            FROM [dbo].[PaymentMethods] pm
-                            WHERE pm.id = @id";
-            PaymentMethod pm = new PaymentMethod();
-            using (SqlConnection conn = GetConnection())
-            using (OpenCbsCommand c = new OpenCbsCommand(q, conn))
-            {
-                c.AddParam("@id", paymentMethodId);
-                using (OpenCbsReader r = c.ExecuteReader())
-                {
-                    if (r != null && !r.Empty)
-                    {
-                        r.Read();
-                        pm = GetPaymentMethodFromReader(r);
-                    }
-                }
-            }
-            return pm;
         }
 
         public PaymentMethod SelectPaymentMethodByName(string name)

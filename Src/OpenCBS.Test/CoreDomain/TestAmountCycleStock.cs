@@ -39,7 +39,6 @@ namespace OpenCBS.Test.CoreDomain
         public void Get_Enumerator()
         {
            Assert.Ignore();
-            int i = 1;
 //            foreach (AmountCycle cycle in _SetAmountCycleStockWith4Cycles())
 //            {
 //                Assert.AreEqual(i++, cycle.Number);

@@ -147,7 +147,7 @@ namespace OpenCBS.GUI.Database
 				}
 			}
 						
-			catch (Exception ex)
+			catch (Exception)
 			{			
 				throw new ApplicationException("Cannot Locate SQL Server.");
 			}

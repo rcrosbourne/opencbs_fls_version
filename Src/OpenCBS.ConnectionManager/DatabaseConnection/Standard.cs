@@ -346,7 +346,7 @@ namespace OpenCBS.DatabaseConnection
                 connection.Close();
                 return true;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return false;
             }

@@ -65,7 +65,7 @@ namespace OpenCBS.GUI
             {
                 var name = (string)value;
                 //  var temp = GetString(name);
-                return name.Contains("Par") == null ? GetString(name) : name;
+                return name;
             };
             parListView.RowFormatter = listViewItem =>
             {
